@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "name": "xpert-global-trade",
+  "description": "Configuration for Xpert Global Trade Fintech Dashboard",
+  "author": "Xpert Global",
+  "license": "Apache-2.0",
+  "mcpServers": {
+    "fintech-tools": {
+      "command": "node",
+      "args": ["server.js"],
+      "env": {
+        "NODE_ENV": "development",
+        "PORT": 3000,
+        "DB_URI": "mongodb://localhost:27017/xpert-global-trade",
+        "API_KEY": "replace_with_your_api_key"
+      }
+    },
+    "analytics-engine": {
+      "command": "node",
+      "args": ["analytics.js"],
+      "env": {
+        "NODE_ENV": "development",
+        "PORT": 4000,
+        "DB_URI": "mongodb://localhost:27017/xpert-analytics"
+      }
+    }
+  },
+  "logging": {
+    "level": "info",
+    "file": "logs/mcp.log"
+  },
+  "features": {
+    "realTimeTrading": true,
+    "marketDataFeed": true,
+    "userNotifications": true
+  }
+}
