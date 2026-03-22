@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>XPERT Global Test Payment</title>
+</head>
+<body>
+  <h2>Pay ₦1,000 Test Payment</h2>
+
+  <button onclick="pay()">Pay Now</button>
+
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script>
+    function pay() {
+      let handler = PaystackPop.setup({
+        key: 'pk_live_e6175bedcb566b9c0c14f0ce109f6e16cdd65b80',
+        email: 'testuser@example.com',
+        amount: 1000 * 100,
+        metadata: {
+          project: "xpert-global"
+        },
+        callback: function(response){
+          alert('Payment complete! Reference: ' + response.reference);
+        },
+        onClose: function(){
+          alert('Payment window closed.');
+        }
+      });
+      handler.openIframe();
+    }
+  </script>
+</body>
+</html>
