@@ -1,6 +1,24 @@
 # 💼 Xpert Global Trade – Fintech Dashboard
 
 A powerful and fully featured fintech dashboard prototype designed to manage accounts, payments, and financial transactions efficiently. Built for modern banking systems, trading platforms, and financial service providers who value reliability, structure, and clarity.
+## 🧠 XPERT Global Trade – System Architecture
+
+```mermaid
+flowchart TD
+    A[User Interface<br>(Dashboard, Mobile, Web)] --> B[API Gateway]
+
+    B --> C[Authentication & Security Layer<br>(JWT, 2FA, Permissions)]
+    B --> D[Payments Engine<br>(Transfers, Deposits, Withdrawals)]
+    B --> E[AI Trading Engine<br>(Signals, Risk Models, Automation)]
+    B --> F[Account Services<br>(Loans, Cards, Rewards, Taxes)]
+    B --> G[Analytics & Reporting<br>(Charts, Insights, Monitoring)]
+
+    D --> H[Payment Providers<br>(Paystack, Banks, Cards)]
+    E --> I[Market Data Feeds<br>(Forex, Crypto, Stocks)]
+    F --> J[User Data Store<br>(Firestore / Database)]
+    G --> J
+
+    J --> K[Admin Dashboard<br>(Monitoring, Controls)]
 
 ---
 
