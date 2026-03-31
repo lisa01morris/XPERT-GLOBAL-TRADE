@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: xpert-global-trade
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "node server.js"
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
