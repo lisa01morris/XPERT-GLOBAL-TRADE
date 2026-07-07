@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin — Web Craft AI</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="/pages/index.html">← Back</a>
+    <h1>Admin & Management (Supabase)</h1>
+
+    <section>
+      <h2>Manage users</h2>
+      <p>We keep the admin surface minimal and secure. Use <strong>Supabase Studio</strong> to manage users and data directly:</p>
+      <ol>
+        <li>Go to your Supabase project and open <strong>Authentication → Users</strong>.</li>
+        <li>Search, edit user metadata, disable accounts, or reset passwords from Supabase Studio.</li>
+      </ol>
+      <p>If you want a web admin UI that modifies users, implement server endpoints that use <code>SUPABASE_SERVICE_ROLE_KEY</code> (server-only key). Never expose it in client code.</p>
+    </section>
+
+    <section>
+      <h2>Server example</h2>
+      <p>See <code>/server-examples/supabase-admin.example.js</code> for a Node example. Add the key in Vercel environment variables when you deploy.</p>
+    </section>
+
+    <section>
+      <h2>Audit log</h2>
+      <p>We include an audit table in <code>/supabase/schema.sql</code>. When you build server endpoints, insert a row into <code>admin_audit</code> for every admin action (who, action, target, timestamp).</p>
+    </section>
+
+    <section>
+      <h2>Need help?</h2>
+      <p>If you want, I can later add a protected admin web UI (Next.js API routes + pages) that calls Supabase service-role endpoints. For now keep admin work inside Supabase Studio.</p>
+    </section>
+
+  </div>
+</body>
+</html>

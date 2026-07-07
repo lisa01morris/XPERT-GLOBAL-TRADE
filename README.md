@@ -1,77 +1,26 @@
-# 💼 Xpert Global Trade – Fintech Dashboard
+# Xpert Global Trade — AI Site Builder Hub
 
-A powerful and fully featured fintech dashboard prototype designed to manage accounts, payments, and financial transactions efficiently. Built for modern banking systems, trading platforms, and financial service providers who value reliability, structure, and clarity.
-## 🧠 XPERT Global Trade – System Architecture
+This branch adds a small static AI Site Builder Hub to the repo. It includes:
 
-```mermaid
-flowchart TD
-    A[User Interface<br>(Dashboard, Mobile, Web)] --> B[API Gateway]
+- A landing page (pages/index.html) promoting an AI-driven site builder.
+- Templates/examples page (pages/templates.html) linking to live demos.
+- Tutorials page (pages/tutorials.html) with Vercel + Supabase setup steps.
+- Products page (pages/products.html) listing checkout and social links you provided.
+- Admin instructions (pages/admin.html) explaining safe Supabase admin practices.
+- Static assets (assets/css/style.css, assets/img/logo.svg).
+- Example Supabase SQL schema (supabase/schema.sql) and a server-side admin example (server-examples/supabase-admin.example.js).
+- .env.example with placeholders for environment variables.
 
-    B --> C[Authentication & Security Layer<br>(JWT, 2FA, Permissions)]
-    B --> D[Payments Engine<br>(Transfers, Deposits, Withdrawals)]
-    B --> E[AI Trading Engine<br>(Signals, Risk Models, Automation)]
-    B --> F[Account Services<br>(Loans, Cards, Rewards, Taxes)]
-    B --> G[Analytics & Reporting<br>(Charts, Insights, Monitoring)]
+Deploy notes
+1. Connect this repo to Vercel (Import Project) and deploy (static pages).  
+2. If you later add server endpoints, set SUPABASE_SERVICE_ROLE_KEY in Vercel Project > Environment Variables (server-only).  
+3. To run the SQL, open Supabase → SQL Editor and run supabase/schema.sql.  
 
-    D --> H[Payment Providers<br>(Paystack, Banks, Cards)]
-    E --> I[Market Data Feeds<br>(Forex, Crypto, Stocks)]
-    F --> J[User Data Store<br>(Firestore / Database)]
-    G --> J
+Links & products
+- Demo sites and product links are included in /pages/templates.html and /pages/products.html. Use UTM parameters on outbound links for tracking.
 
-    J --> K[Admin Dashboard<br>(Monitoring, Controls)]
+Security
+- Do not commit service role keys or any secret to this repo.  
+- All admin actions that modify users must run server-side using the service role key.
 
----
-
-## 🚀 Features
-
-- **Money Transfers** – Secure peer-to-peer and multi-channel transfers  
-- **Deposit Methods** – Flexible funding options  
-- **Account Management** – Suspend, block, or secure accounts  
-- **Loan Applications** – Apply and track loans with ease  
-- **Donations** – Built-in charitable contribution system  
-- **Card Management** – Card activation and account setup  
-- **Benefits & Rewards** – Centralized reward tracking  
-- **Bill Payments** – Pay utilities and subscriptions  
-- **Tax Management** – Monitor taxes and process refunds  
-- **Credit Monitoring** – Track financial health and credit score  
-- **Analytics & Reports** – Visual dashboards and insights  
-- **Light/Dark Mode** – User-friendly theme switching  
-- **Live Preview** – Real-time updates  
-- **Fullscreen Mode** – Enhanced user experience  
-- **Cross Platform** – Works across devices  
-
----
-
-## 🛠 Skills / Tech Stack
-
-- JavaScript  
-- HTML5  
-- CSS3  
-- Node.js (if backend is included)  
-- Express (if applicable)  
-
----
-
-## ⚙️ Optimizations
-
-- Refactored code for better structure and maintainability  
-- Improved performance with optimized data flow  
-- Reduced load times and unnecessary re-renders  
-- Modular architecture for easy scaling  
-- Accessibility improvements for better usability  
-
----
-
-## 🗺 Roadmap
-
-- Improved browser compatibility  
-- More third-party integrations (payments, APIs)  
-- Advanced authentication (OTP, 2FA)  
-- Real-time transaction updates  
-- Mobile-first UI enhancements  
-
----
-
-## 🔐 Environment Variables
-
-To run this project, create a `.env` file and include:
+If you want changes to copy wording, color, or add more pages, tell me and I will update the branch.

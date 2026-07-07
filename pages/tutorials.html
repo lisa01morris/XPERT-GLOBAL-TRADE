@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tutorials — Web Craft AI</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="/pages/index.html">← Back</a>
+    <h1>Quick Tutorials</h1>
+
+    <section>
+      <h2>1. Deploy this site to Vercel (static)</h2>
+      <ol>
+        <li>Sign in to Vercel and Import Project from GitHub.</li>
+        <li>Choose the repo <strong>lisa01morris/XPERT-GLOBAL-TRADE</strong> and import.</li>
+        <li>Set environment variables later if you add server endpoints.</li>
+        <li>Deploy. Vercel publishes a URL — point your domain in Hostinger to Vercel following their DNS instructions.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>2. Connect Supabase (for admin & data)</h2>
+      <ol>
+        <li>Create or use your existing Supabase project.</li>
+        <li>Open <strong>SQL Editor</strong> and run the file <code>/supabase/schema.sql</code> included in this repo to create example tables.</li>
+        <li>Admin actions (modify users, issue rewards) must run server-side with <code>SUPABASE_SERVICE_ROLE_KEY</code>. Add that key in Vercel environment variables only when you add server endpoints.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>3. Add an admin server endpoint (example)</h2>
+      <p>See <code>/server-examples/supabase-admin.example.js</code> for a Node script that lists users and updates metadata using the service role key. Move this into a protected Next.js API route or a serverless function when you enable server-side code in Vercel.</p>
+
+    </section>
+
+    <section>
+      <h2>4. Drive traffic & convert</h2>
+      <ul>
+        <li>Use the Products page to consolidate your offerings and direct visitors to checkout links.</li>
+        <li>Publish educational guides and case studies (use /pages/tutorials.html and /pages/templates.html).</li>
+        <li>Configure analytics (Google Analytics, Plausible) and track conversions from product checkout links.</li>
+      </ul>
+    </section>
+
+  </div>
+</body>
+</html>
